@@ -12,7 +12,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/liuzl/da"
+	"github.com/misseven0/opencc/da"
 )
 
 //go:embed config
