@@ -54,10 +54,10 @@ func (da *Cedar) Load(in io.Reader, dataType string) error {
 // where dataType is either "json" or "gob".
 func (da *Cedar) LoadFromFile(fileName string, dataType string) error {
 	file, err := os.OpenFile(fileName, os.O_RDONLY, 0600)
-	defer file.Close()
 	if err != nil {
 		return err
 	}
+	defer file.Close()
 	in := bufio.NewReader(file)
 	return da.Load(in, dataType)
 }

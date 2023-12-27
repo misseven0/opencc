@@ -51,7 +51,7 @@ func Build(in io.Reader) (*Dict, error) {
 // PrefixMatch str by Dict, returns the matched string and its according values
 func (d *Dict) PrefixMatch(str string) (map[string][]string, error) {
 	if d.Trie == nil {
-		return nil, fmt.Errorf("Trie is nil")
+		return nil, fmt.Errorf("d.Trie is nil")
 	}
 	ret := make(map[string][]string)
 	for _, id := range d.Trie.PrefixMatch([]byte(str), 0) {

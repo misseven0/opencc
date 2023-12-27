@@ -50,7 +50,6 @@ func loadTestData() {
 			panic(err)
 		}
 	}
-	return
 }
 
 func TestBasic(t *testing.T) {

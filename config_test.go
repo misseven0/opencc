@@ -2,7 +2,7 @@ package opencc
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"os"
 	"testing"
 )
 
@@ -12,7 +12,7 @@ func TestConfig(t *testing.T) {
 		"config/t2s.json",
 	}
 	for _, c := range cases {
-		body, err := ioutil.ReadFile(c)
+		body, err := os.ReadFile(c)
 		if err != nil {
 			t.Error(err)
 		}
